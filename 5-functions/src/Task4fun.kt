@@ -15,5 +15,11 @@
 */
 
 fun main() {
+    val email: String = "mail@gmail.com";
 
+    println(checkEmail(email));
+}
+
+private fun checkEmail(email: String): Boolean {
+    return email.contains("@") && email.contains(".");
 }

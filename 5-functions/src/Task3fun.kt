@@ -7,5 +7,18 @@
 */
 
 fun main() {
+    val num: Int = readln().toInt();
+    val result: String = numericToString(num);
+    print(result);
+}
 
+private fun numericToString(num: Int): String {
+    return when (num) {
+        1 -> "один";
+        2 -> "два";
+        3 -> "три";
+        4 -> "четыре";
+        5 -> "пять";
+        else -> "ошибка";
+    };
 }

@@ -6,5 +6,17 @@
 */
 
 fun main() {
+    val a: Int = 15;
+    val b: Int = 15;
 
+    val result: String = getCompareMessage(a, b)
+    print(result);
+}
+
+private fun getCompareMessage(a: Int, b: Int): String {
+    return when {
+        (a > b) -> "первое число больше";
+        (b > a) -> "второе число больше";
+        else -> "числа равны";
+    };
 }
