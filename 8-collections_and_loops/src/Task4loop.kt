@@ -9,5 +9,23 @@
 */
 
 fun main() {
+    val user1 = Employee("Kostya", 25);
+    val user2 = Employee("Alena", 40);
+    val user3 = Employee("Tigran", 45);
 
+    val listUser = listOf(user1, user2, user3);
+
+    val department = Department("Manager", listUser);
+
+    val averageAge = getAverageAge(department);
+
+    println("Средний возраст подразделения ${department.name} равен ${"%.2f".format(averageAge)}");
+}
+
+fun getAverageAge(department: Department): Double {
+    var sumAge: Double = 0.0;
+    for (employee in department.employees) {
+        sumAge += employee.age;
+    }
+    return sumAge / department.employees.size;
 }
