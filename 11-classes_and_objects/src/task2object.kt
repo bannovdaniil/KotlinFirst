@@ -5,5 +5,18 @@
 */
 
 fun main() {
+    val round = Round(21);
 
+    println("Площадь: ${"%.2f".format(round.area())}");
+    println("Длина окружности: ${"%.2f".format(round.area())}");
+}
+
+class Round(private val radius: Int) {
+    fun area(): Double {
+        return Math.PI * radius * radius;
+    }
+
+    fun length(): Double {
+        return Math.PI * radius;
+    }
 }
