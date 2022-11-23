@@ -21,8 +21,8 @@ fun main() {
     println(city);
 }
 
-fun employeeCity(employee: EmployeeVal): String? {
-    return employee.company?.address?.city;
+fun employeeCity(employee: EmployeeVal): String {
+    return employee.company?.address?.city ?: "Неизвестен";
 }
 
 class Address(val address: String, val city: String)
