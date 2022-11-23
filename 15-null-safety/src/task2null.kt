@@ -13,9 +13,18 @@ class Employee(val name: String, val company: Company?)
 */
 
 fun main() {
+    val address = Address("st. 1th", "New York");
+    val company = CompanyVal("IBM", address);
+    val employer = EmployeeVal("Oleg", company);
 
+    val city = employeeCity(employer);
+    println(city);
+}
+
+fun employeeCity(employee: EmployeeVal): String? {
+    return employee.company?.address?.city;
 }
 
 class Address(val address: String, val city: String)
 class CompanyVal(val name: String, val address: Address?)
-class EmployeeVal(val name: String, val company: Company?)
+class EmployeeVal(val name: String, val company: CompanyVal?)
